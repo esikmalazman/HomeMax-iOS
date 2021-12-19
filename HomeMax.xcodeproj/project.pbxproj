@@ -13,6 +13,7 @@
 		7F23B7DA276F48CD00C2E320 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F23B7D8276F48CD00C2E320 /* Main.storyboard */; };
 		7F23B7DC276F48CF00C2E320 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F23B7DB276F48CF00C2E320 /* Assets.xcassets */; };
 		7F23B7DF276F48CF00C2E320 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F23B7DD276F48CF00C2E320 /* LaunchScreen.storyboard */; };
+		7F23B7E7276F490D00C2E320 /* Art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F23B7E6276F490D00C2E320 /* Art.scnassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7F23B7DB276F48CF00C2E320 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F23B7DE276F48CF00C2E320 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F23B7E0276F48CF00C2E320 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F23B7E6276F490D00C2E320 /* Art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Art.scnassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		7F23B7D1276F48CD00C2E320 /* HomeMax */ = {
 			isa = PBXGroup;
 			children = (
+				7F23B7E6276F490D00C2E320 /* Art.scnassets */,
 				7F23B7D2276F48CD00C2E320 /* AppDelegate.swift */,
 				7F23B7D4276F48CD00C2E320 /* SceneDelegate.swift */,
 				7F23B7D6276F48CD00C2E320 /* ViewController.swift */,
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F23B7DF276F48CF00C2E320 /* LaunchScreen.storyboard in Resources */,
+				7F23B7E7276F490D00C2E320 /* Art.scnassets in Resources */,
 				7F23B7DC276F48CF00C2E320 /* Assets.xcassets in Resources */,
 				7F23B7DA276F48CD00C2E320 /* Main.storyboard in Resources */,
 			);
