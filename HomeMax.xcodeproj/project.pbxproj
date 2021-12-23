@@ -9,25 +9,27 @@
 /* Begin PBXBuildFile section */
 		7F23B7D3276F48CD00C2E320 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F23B7D2276F48CD00C2E320 /* AppDelegate.swift */; };
 		7F23B7D5276F48CD00C2E320 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F23B7D4276F48CD00C2E320 /* SceneDelegate.swift */; };
-		7F23B7D7276F48CD00C2E320 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F23B7D6276F48CD00C2E320 /* ViewController.swift */; };
+		7F23B7D7276F48CD00C2E320 /* ARProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F23B7D6276F48CD00C2E320 /* ARProductViewController.swift */; };
 		7F23B7DA276F48CD00C2E320 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F23B7D8276F48CD00C2E320 /* Main.storyboard */; };
 		7F23B7DC276F48CF00C2E320 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F23B7DB276F48CF00C2E320 /* Assets.xcassets */; };
 		7F23B7DF276F48CF00C2E320 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F23B7DD276F48CF00C2E320 /* LaunchScreen.storyboard */; };
 		7F23B7E7276F490D00C2E320 /* Art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F23B7E6276F490D00C2E320 /* Art.scnassets */; };
 		7F23B808276F903A00C2E320 /* SCNNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F23B807276F903A00C2E320 /* SCNNode+Extensions.swift */; };
+		7FC206142773F8B900C29CFE /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC206132773F8B900C29CFE /* ProductDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7F23B7CF276F48CD00C2E320 /* HomeMax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeMax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F23B7D2276F48CD00C2E320 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F23B7D4276F48CD00C2E320 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7F23B7D6276F48CD00C2E320 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7F23B7D6276F48CD00C2E320 /* ARProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARProductViewController.swift; sourceTree = "<group>"; };
 		7F23B7D9276F48CD00C2E320 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7F23B7DB276F48CF00C2E320 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F23B7DE276F48CF00C2E320 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F23B7E0276F48CF00C2E320 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F23B7E6276F490D00C2E320 /* Art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Art.scnassets; sourceTree = "<group>"; };
 		7F23B807276F903A00C2E320 /* SCNNode+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNNode+Extensions.swift"; sourceTree = "<group>"; };
+		7FC206132773F8B900C29CFE /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,12 +65,13 @@
 				7F23B7E6276F490D00C2E320 /* Art.scnassets */,
 				7F23B7D2276F48CD00C2E320 /* AppDelegate.swift */,
 				7F23B7D4276F48CD00C2E320 /* SceneDelegate.swift */,
-				7F23B7D6276F48CD00C2E320 /* ViewController.swift */,
+				7F23B7D6276F48CD00C2E320 /* ARProductViewController.swift */,
 				7F23B7D8276F48CD00C2E320 /* Main.storyboard */,
 				7F23B7DB276F48CF00C2E320 /* Assets.xcassets */,
 				7F23B7DD276F48CF00C2E320 /* LaunchScreen.storyboard */,
 				7F23B7E0276F48CF00C2E320 /* Info.plist */,
 				7F23B807276F903A00C2E320 /* SCNNode+Extensions.swift */,
+				7FC206132773F8B900C29CFE /* ProductDetailsViewController.swift */,
 			);
 			path = HomeMax;
 			sourceTree = "<group>";
@@ -146,7 +149,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F23B808276F903A00C2E320 /* SCNNode+Extensions.swift in Sources */,
-				7F23B7D7276F48CD00C2E320 /* ViewController.swift in Sources */,
+				7F23B7D7276F48CD00C2E320 /* ARProductViewController.swift in Sources */,
+				7FC206142773F8B900C29CFE /* ProductDetailsViewController.swift in Sources */,
 				7F23B7D3276F48CD00C2E320 /* AppDelegate.swift in Sources */,
 				7F23B7D5276F48CD00C2E320 /* SceneDelegate.swift in Sources */,
 			);
