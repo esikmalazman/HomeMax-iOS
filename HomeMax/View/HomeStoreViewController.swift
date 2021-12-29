@@ -12,9 +12,9 @@ final class HomeStoreViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     //MARK: - Variables
-    private var furnitureItems = [Product]()
-    let data = ProductDataSource()
+    private var product = [Product]()
     private var selectedIndex : Int?
+    private let presenter = HomeStorePresenter()
     
     //MARK: - LifeCycle
     override func viewWillAppear(_ animated: Bool) {
@@ -25,7 +25,8 @@ final class HomeStoreViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        furnitureItems = data.data
+        presenter.setViewDelegate(delegate: self)
+        presenter.getProductList()
         setupCollectionView()
     }
     
@@ -35,9 +36,10 @@ final class HomeStoreViewController: UIViewController {
         collectionView.delegate = self
 
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if  let destination = segue.destination as? ProductDetailsViewController {
-            destination.selectedProduct = furnitureItems[selectedIndex ?? 0]
+            destination.selectedProduct = product[selectedIndex ?? 0]
         }
     }
 }
@@ -45,11 +47,11 @@ final class HomeStoreViewController: UIViewController {
 //MARK: -  Datasource
 extension HomeStoreViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return furnitureItems.count
+        return product.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ProductCollectionCell
-        let item = furnitureItems[indexPath.row]
+        let item = product[indexPath.row]
         cell.setProductCellContent(image: item.image, label: item.name)
         return cell
     }
@@ -58,9 +60,7 @@ extension HomeStoreViewController : UICollectionViewDataSource {
 //MARK: - Delegate
 extension HomeStoreViewController : UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectedIndex = indexPath.row
-        performSegue(withIdentifier: SeguesID.toProductDetails, sender: self)
-        print("Item : \(indexPath.row)")
+        presenter.didTapProductList(atIndex: indexPath.row)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -68,12 +68,26 @@ extension HomeStoreViewController : UICollectionViewDelegate {
         return CGSize(width: phoneWidth, height: 220)
     }
 }
-
+//MARK: - UICollectionViewDelegateFlowLayout
 extension HomeStoreViewController : UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 15
+    }
+}
+
+//MARK: - Presenter Delegate
+extension HomeStoreViewController: HomeStorePresenterDelegate {
+    func presentProductDataSource(_ HomeStorePresenter: HomeStorePresenter, data: [Product]) {
+        product = data
+        collectionView.reloadData()
+    }
+    
+    func presentActionDidSelectCell(_ HomeStorePresenter: HomeStorePresenter, index: Int) {
+        selectedIndex = index
+        performSegue(withIdentifier: SeguesID.toProductDetails, sender: self)
+        print("Selected Item : \(index)")
     }
 }
