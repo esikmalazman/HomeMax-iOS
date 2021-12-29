@@ -9,13 +9,6 @@ import UIKit
 import SceneKit
 import ARKit
 
-enum Assets : String {
-    case bastone = "Bastone"
-    case bookcase = "Bookcase"
-    case dresser = "Dresser"
-    case sofa = "Sofa"
-}
-
 final class ARProductViewController: UIViewController {
     //MARK: - Outlets
     @IBOutlet weak var sceneView: ARSCNView!
@@ -37,11 +30,15 @@ final class ARProductViewController: UIViewController {
     //MARK: - LifeCycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        setupInitialView()
+        setupCoachingOverlay()
+        setupSceneConfiguration()
+    }
+    private func setupInitialView() {
         view.isUserInteractionEnabled = false
         navigationController?.navigationBar.tintColor = .primaryDarkGreen
         AppTheme.clearDefaultNavigationBar(navigationController!.navigationBar)
-        setupCoachingOverlay()
-        setupSceneConfiguration()
+        addSpinnerView()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -200,7 +197,9 @@ extension ARProductViewController {
 
 //MARK: - ARCoachingOverlayView Delegate
 extension ARProductViewController : ARCoachingOverlayViewDelegate {
-    
+    func coachingOverlayViewWillActivate(_ coachingOverlayView: ARCoachingOverlayView) {
+        removeSpinnerView()
+    }
     func coachingOverlayViewDidDeactivate(_ coachingOverlayView: ARCoachingOverlayView) {
         view.isUserInteractionEnabled = true
         navigationController?.navigationBar.isHidden = false
