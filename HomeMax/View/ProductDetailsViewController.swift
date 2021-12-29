@@ -42,10 +42,6 @@ final class ProductDetailsViewController: UIViewController {
         presenter.didAddToCartTap()
     }
     
-    @IBAction func arTap(_ sender: UIButton) {
-        presenter.didARTap()
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? ARProductViewController {
             destination.assetsName = presenter.getARProduct(selectedProduct?.name ?? "Nil")
@@ -56,10 +52,6 @@ final class ProductDetailsViewController: UIViewController {
 
 //MARK: - Presenter Delegate
 extension ProductDetailsViewController : ProductDetailsPresenterDelegate {
-    func presentActionAR(_ ProductDetailsPresenter: ProductDetailsPresenter) {
-        performSegue(withIdentifier: SeguesID.toARSceneVC, sender: self)
-    }
-    
     func presentActionAddToCart(_ ProductDetailsPresenter: ProductDetailsPresenter) {
         setupAlertView()
     }

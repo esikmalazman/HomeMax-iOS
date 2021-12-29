@@ -195,7 +195,6 @@ through your lens and AR experiences</string>
                                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="16" scale="small"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="arTap:" destination="kkX-jt-C5P" eventType="touchUpInside" id="4yA-oL-3Ne"/>
                                                     <segue destination="BYZ-38-t0r" kind="show" identifier="goToARSceneViewController" id="M9Y-ez-E1Y"/>
                                                 </connections>
                                             </button>

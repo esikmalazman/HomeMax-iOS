@@ -9,7 +9,6 @@ import Foundation
 
 protocol ProductDetailsPresenterDelegate : AnyObject {
     func presentActionAddToCart(_ ProductDetailsPresenter : ProductDetailsPresenter)
-    func presentActionAR(_ ProductDetailsPresenter : ProductDetailsPresenter)
 }
 
 final class ProductDetailsPresenter {
@@ -22,10 +21,6 @@ final class ProductDetailsPresenter {
     
     func didAddToCartTap() {
         delegate?.presentActionAddToCart(self)
-    }
-    
-    func didARTap() {
-        delegate?.presentActionAR(self)
     }
     
     func getARProduct(_ productName : String)-> Assets {
