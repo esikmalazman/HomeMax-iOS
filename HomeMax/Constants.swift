@@ -16,6 +16,11 @@ struct AppTheme {
     }
 }
 
+struct SeguesID {
+    static let toARSceneVC = "goToARSceneViewController"
+    static let toProductDetails = "goToProductDetailsViewController"
+}
+
 struct Device {
     static let bounds = UIScreen.main.bounds
     static let width = bounds.width
