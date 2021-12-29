@@ -7,8 +7,28 @@
 
 import UIKit
 
+private var spinnerView : UIView?
+
 extension UIViewController {
-    // Show toaster message to current view
+    /// Add UIActivityIndicatorView to current view controller
+    func addSpinnerView(_ color : UIColor = .gray, _ style : UIActivityIndicatorView.Style = .medium) {
+        spinnerView = UIView(frame: view.bounds)
+        guard let spinnerView = spinnerView else {
+            return
+        }
+        let activityIndicator = UIActivityIndicatorView(style: style)
+        activityIndicator.center = spinnerView.center
+        activityIndicator.color = color
+        activityIndicator.startAnimating()
+        
+        spinnerView.addSubview(activityIndicator)
+        view.addSubview(spinnerView)
+    }
+    /// Remove UIActivityIndicatorView to current view controller
+    func removeSpinnerView() {
+        spinnerView?.removeFromSuperview()
+    }
+    /// Show toaster message to current view
     func showToaster(withMessage message : String) {
         let toastLabel = UILabel()
         toastLabel.translatesAutoresizingMaskIntoConstraints = false
