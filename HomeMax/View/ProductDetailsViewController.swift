@@ -24,6 +24,8 @@ final class ProductDetailsViewController: UIViewController {
     }()
     
     var selectedProduct : Product?
+    private let presenter = ProductDetailsPresenter()
+    
     //MARK: - LifeCycle
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.tintColor = .primaryDarkGreen
@@ -31,38 +33,35 @@ final class ProductDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.setViewDelegate(delegate: self)
         setupViewOutlets()
     }
     
     //MARK: - Actions
     @IBAction func addToCartTap(_ sender: UIButton) {
-        setupAlertView()
+        presenter.didAddToCartTap()
     }
     
     @IBAction func arTap(_ sender: UIButton) {
-        performSegue(withIdentifier: SeguesID.toARSceneVC, sender: self)
+        presenter.didARTap()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? ARProductViewController {
-            destination.assetsName = arProductType(selectedProduct?.name ?? "Nil")
+            destination.assetsName = presenter.getARProduct(selectedProduct?.name ?? "Nil")
             destination.selectedProduct = selectedProduct
         }
     }
+}
+
+//MARK: - Presenter Delegate
+extension ProductDetailsViewController : ProductDetailsPresenterDelegate {
+    func presentActionAR(_ ProductDetailsPresenter: ProductDetailsPresenter) {
+        performSegue(withIdentifier: SeguesID.toARSceneVC, sender: self)
+    }
     
-    func arProductType(_ productName : String)-> Assets {
-        switch productName {
-        case "Sofa" :
-            return Assets.sofa
-        case "Bastone" :
-            return Assets.bastone
-        case "Bookcase" :
-            return Assets.bookcase
-        case "Dresser" :
-            return Assets.dresser
-        default :
-            return Assets.bastone
-        }
+    func presentActionAddToCart(_ ProductDetailsPresenter: ProductDetailsPresenter) {
+        setupAlertView()
     }
 }
 //MARK: - Private Methods
