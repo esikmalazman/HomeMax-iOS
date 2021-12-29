@@ -37,10 +37,11 @@ final class ARProductViewController: UIViewController {
     //MARK: - LifeCycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        view.isUserInteractionEnabled = false
         navigationController?.navigationBar.tintColor = .primaryDarkGreen
         AppTheme.clearDefaultNavigationBar(navigationController!.navigationBar)
-        setupSceneConfiguration()
         setupCoachingOverlay()
+        setupSceneConfiguration()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -52,8 +53,8 @@ final class ARProductViewController: UIViewController {
     @IBAction func refreshTap(_ sender: UIBarButtonItem) {
         removeAllItem()
         // Reset sceneView
-        setupSceneConfiguration()
         setupCoachingOverlay()
+        setupSceneConfiguration()
     }
 }
 
@@ -201,6 +202,7 @@ extension ARProductViewController {
 extension ARProductViewController : ARCoachingOverlayViewDelegate {
     
     func coachingOverlayViewDidDeactivate(_ coachingOverlayView: ARCoachingOverlayView) {
+        view.isUserInteractionEnabled = true
         navigationController?.navigationBar.isHidden = false
         showToaster(withMessage: "Tap screen to place the furniture in your space")
         setupSceneView()

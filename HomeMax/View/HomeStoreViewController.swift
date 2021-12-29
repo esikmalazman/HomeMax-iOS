@@ -25,7 +25,6 @@ final class HomeStoreViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         furnitureItems = data.data
         setupCollectionView()
     }

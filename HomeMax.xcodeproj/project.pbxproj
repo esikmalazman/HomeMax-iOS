@@ -19,6 +19,7 @@
 		7F375C3B277BD0E700562065 /* AddToCartAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F375C39277BD0E700562065 /* AddToCartAlert.xib */; };
 		7F375C42277BED5600562065 /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F375C40277BED5600562065 /* BottomSheet.swift */; };
 		7F375C43277BED5600562065 /* BottomSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F375C41277BED5600562065 /* BottomSheet.xib */; };
+		7F375C45277BFFF700562065 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7F375C44277BFFF700562065 /* README.md */; };
 		7F6AB294277690E700B7A888 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6AB293277690E700B7A888 /* Product.swift */; };
 		7F6AB2962776915F00B7A888 /* ProductDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6AB2952776915F00B7A888 /* ProductDataSource.swift */; };
 		7F6AB29C277695C600B7A888 /* HomeStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6AB29B277695C600B7A888 /* HomeStoreViewController.swift */; };
@@ -55,6 +56,7 @@
 		7F375C39277BD0E700562065 /* AddToCartAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddToCartAlert.xib; sourceTree = "<group>"; };
 		7F375C40277BED5600562065 /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
 		7F375C41277BED5600562065 /* BottomSheet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomSheet.xib; sourceTree = "<group>"; };
+		7F375C44277BFFF700562065 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7F6AB293277690E700B7A888 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		7F6AB2952776915F00B7A888 /* ProductDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDataSource.swift; sourceTree = "<group>"; };
 		7F6AB29B277695C600B7A888 /* HomeStoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStoreViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 		7F23B7C6276F48CD00C2E320 = {
 			isa = PBXGroup;
 			children = (
+				7F375C44277BFFF700562065 /* README.md */,
 				7F23B7D1276F48CD00C2E320 /* HomeMax */,
 				7F23B7D0276F48CD00C2E320 /* Products */,
 			);
@@ -290,6 +293,7 @@
 				7F23B7DC276F48CF00C2E320 /* Assets.xcassets in Resources */,
 				7F375C3B277BD0E700562065 /* AddToCartAlert.xib in Resources */,
 				7F6AB2A02776973300B7A888 /* ProductCollectionCell.xib in Resources */,
+				7F375C45277BFFF700562065 /* README.md in Resources */,
 				7F23B7DA276F48CD00C2E320 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
