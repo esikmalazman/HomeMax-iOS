@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BottomSheet" customModule="HomeMax" customModuleProvider="target">
+            <connections>
+                <outlet property="productSheetImageView" destination="1tb-Rz-OqS" id="rTf-od-DRa"/>
+                <outlet property="productSheetLabel" destination="5CX-eS-9Gy" id="t9l-HM-Il4"/>
+                <outlet property="productSheetPrice" destination="pN1-So-3cs" id="cAA-KR-k5Y"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sofa" translatesAutoresizingMaskIntoConstraints="NO" id="1tb-Rz-OqS">
+                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="7xV-kx-9CR"/>
+                        <constraint firstAttribute="width" constant="120" id="jey-pN-9rd"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="jww-xp-UO6">
+                    <rect key="frame" x="128" y="15" width="278" height="97"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5CX-eS-9Gy">
+                            <rect key="frame" x="0.0" y="0.0" width="64" height="30"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                            <color key="textColor" red="0.12699329849999999" green="0.51202744249999999" blue="0.50055217740000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pN1-So-3cs">
+                            <rect key="frame" x="0.0" y="30" width="37" height="67"/>
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="1tb-Rz-OqS" secondAttribute="bottom" id="2jl-4E-g4w"/>
+                <constraint firstItem="1tb-Rz-OqS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="7WL-5c-h8w"/>
+                <constraint firstAttribute="bottom" secondItem="jww-xp-UO6" secondAttribute="bottom" constant="8" id="Gjw-VM-hA6"/>
+                <constraint firstAttribute="trailing" secondItem="jww-xp-UO6" secondAttribute="trailing" constant="8" id="fdY-3A-nV4"/>
+                <constraint firstItem="jww-xp-UO6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="15" id="lFl-JG-4ct"/>
+                <constraint firstItem="1tb-Rz-OqS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="vGY-51-kgo"/>
+                <constraint firstItem="jww-xp-UO6" firstAttribute="leading" secondItem="1tb-Rz-OqS" secondAttribute="trailing" constant="8" id="wPh-xN-qq8"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.8840579710145" y="-181.47321428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Sofa" width="2245" height="1587"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
