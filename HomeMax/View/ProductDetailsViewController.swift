@@ -79,6 +79,7 @@ extension ProductDetailsViewController {
         arBtn.layer.cornerRadius = 35
         addToCartBtn.layer.cornerRadius = 15
     }
+    
     private func setupAlertView() {
         add(addToCartAlertView)
         setupAlertLayout()
