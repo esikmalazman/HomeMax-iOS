@@ -7,11 +7,6 @@
 
 import UIKit
 
-struct SeguesID {
-    static let toARSceneVC = "goToARSceneViewController"
-    static let toProductDetails = "goToProductDetailsViewController"
-}
-
 final class ProductDetailsViewController: UIViewController {
     //MARK: - Outlets
     @IBOutlet weak var productImageView: UIImageView!
