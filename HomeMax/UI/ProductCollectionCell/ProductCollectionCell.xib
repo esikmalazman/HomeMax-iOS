@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="gTV-IL-0wX" customClass="ProductCollectionCell" customModule="HomeMax" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="220"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="200" height="220"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6np-Dj-qIM">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="220"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a04-Ci-PVG">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="220"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Badge - ARKit" translatesAutoresizingMaskIntoConstraints="NO" id="7e2-yd-Rmg">
+                                <rect key="frame" x="8" y="8" width="40" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="jM3-AJ-sPE"/>
+                                    <constraint firstAttribute="width" constant="40" id="qXI-xh-7hH"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXw-5s-462">
+                                <rect key="frame" x="8" y="181" width="184" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" red="0.12699329849999999" green="0.51202744249999999" blue="0.50055217740000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="xXw-5s-462" secondAttribute="bottom" constant="15" id="6nk-1Q-Ln6"/>
+                            <constraint firstAttribute="bottom" secondItem="a04-Ci-PVG" secondAttribute="bottom" id="B6i-5X-T1p"/>
+                            <constraint firstItem="xXw-5s-462" firstAttribute="leading" secondItem="6np-Dj-qIM" secondAttribute="leading" constant="8" id="D5B-GO-Ocm"/>
+                            <constraint firstItem="a04-Ci-PVG" firstAttribute="leading" secondItem="6np-Dj-qIM" secondAttribute="leading" id="XBU-6g-t4X"/>
+                            <constraint firstAttribute="trailing" secondItem="xXw-5s-462" secondAttribute="trailing" constant="8" id="dMb-N0-eNq"/>
+                            <constraint firstItem="7e2-yd-Rmg" firstAttribute="top" secondItem="6np-Dj-qIM" secondAttribute="top" constant="8" id="l7h-Uk-21t"/>
+                            <constraint firstItem="7e2-yd-Rmg" firstAttribute="leading" secondItem="6np-Dj-qIM" secondAttribute="leading" constant="8" id="lQQ-sV-UUL"/>
+                            <constraint firstItem="a04-Ci-PVG" firstAttribute="top" secondItem="6np-Dj-qIM" secondAttribute="top" id="q1b-v0-Fwd"/>
+                            <constraint firstAttribute="trailing" secondItem="a04-Ci-PVG" secondAttribute="trailing" id="wkZ-PP-mQ3"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="6np-Dj-qIM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="2b0-gw-Peo"/>
+                <constraint firstItem="6np-Dj-qIM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="RW1-1P-21R"/>
+                <constraint firstAttribute="bottom" secondItem="6np-Dj-qIM" secondAttribute="bottom" id="ptk-P5-PhU"/>
+                <constraint firstAttribute="trailing" secondItem="6np-Dj-qIM" secondAttribute="trailing" id="upS-tY-hxO"/>
+            </constraints>
+            <connections>
+                <outlet property="productImage" destination="a04-Ci-PVG" id="wsq-oX-09K"/>
+                <outlet property="productLabel" destination="xXw-5s-462" id="RVT-5G-psP"/>
+            </connections>
+            <point key="canvasLocation" x="131.19999999999999" y="81.2807881773399"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Badge - ARKit" width="148" height="78"/>
+    </resources>
+</document>
